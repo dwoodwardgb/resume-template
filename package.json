@@ -1,0 +1,19 @@
+{
+  "name": "resume-template",
+  "version": "1.0.0",
+  "description": "Generate your resume from a template!",
+  "main": "index.js",
+  "repository": "https://github.com/dwoodwardgb/resume-template.git",
+  "author": "David Woodward <dwoodwardgb@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "gen": "jade Resume.jade -O data.json"
+  },
+  "devDependencies": {
+    "chokidar": "^2.0.4"
+  },
+  "dependencies": {
+    "jade": "^1.11.0"
+  }
+}
