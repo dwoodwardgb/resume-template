@@ -1,7 +1,141 @@
+mixin section_item(item)
+  .item
+    .location= item.location
+    .title= item.title
+    - if (item.subtitles)
+      - for (var i = 0; i < item.subtitles.length; i += 1)
+        .subtitle= item.subtitles[i]
+    - if (item.bullets)
+      ul
+        - for (var i = 0; i < item.bullets.length; i += 1)
+          li= item.bullets[i]
+    .date= item.date
+
 doctype
 html(lang="en")
   head
     title David Woodward's Resume
     meta(charset="utf-8")
+    style(type="text/css").
+      * {
+        font-size: 16px;
+      }
+
+      body {
+        margin: 2rem;
+      }
+
+      header {
+        width: 100%;
+        text-align: center;
+      }
+
+      header .title {
+        font-size: 20px;
+        margin: unset;
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+      }
+
+      header .subtitle {
+        font-size: 14px;
+      }
+
+      header .divider {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+      }
+
+      .section:nth-of-type(1) {
+        margin-top: 2rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+      }
+
+      .section > .title {
+        text-transform: uppercase;
+        font-weight: normal;
+        font-size: 18px;
+        width: 100%;
+        border-bottom: solid 1px black;
+      }
+
+      .section > .item {
+        position: relative;
+        margin-bottom: 1rem;
+      }
+
+      .section > .item .date {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+
+      .section > .item .location {
+        font-weight: bold;
+      }
+
+      .section > .item .subtitle {
+        font-size: 14px;
+      }
+
+      .skill-category {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0.25rem;
+      }
+
+      .skill-category > :nth-child(1) {
+        width: 6rem;
+        min-width: 6rem;
+        text-align: right;
+        font-weight: bold;
+      }
+
+      .skill-category .skills {
+        margin-left: 0.45rem;
+      }
+
   body
-    p Hello David!
+    header
+      h1.title David Woodward
+      .subtitle= contact.address
+      div
+        span.subtitle= contact.phone
+        span.divider
+          | |
+        span.subtitle= contact.email
+        span.divider
+          | |
+        span.subtitle= contact.github
+
+    section.section
+      h2.title Skills
+      - for (var i = 0; i < skills.length; i += 1) {
+      .skill-category
+        span= skills[i][0] + ':'
+        span.skills
+          - for (var j = 1; j < skills[i].length; j+= 1) {
+          span= ' ' + skills[i][j] + (j == skills[i].length - 1 ? '' : ',')
+          - }
+      - }
+
+    section.section
+      h2.title Experience
+      - for (var i = 0; i < experience.items.length; i += 1) {
+      +section_item(experience.items[i])
+      - }
+
+    section.section
+      h2.title Education
+      - for (var i = 0; i < education.items.length; i += 1) {
+      +section_item(education.items[i])
+      - }
+
+    section.section
+      h2.title Personal Projects
+      - for (var i = 0; i < personal.items.length; i += 1) {
+      +section_item(personal.items[i])
+      - }

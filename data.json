@@ -1,2 +1,116 @@
 {
+  "contact": {
+    "address": "1 Main Street USA",
+    "phone": "+1 555-555-5555",
+    "email": "test@test.com",
+    "github": "https://github.com/test"
+  },
+  "education": {
+    "items": [
+      {
+        "title": "Bachelor of Science, Computer Science",
+        "location": "University of Maryland, College Park",
+        "date": "Class of 2017",
+        "subtitles": [
+          "Courses of Note: Networks, Compilers, Concurrency, Algorithms, Security, Data Structures"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "title": "Software Engineer",
+        "location": "Gliacell Technologies, Hannover MD",
+        "date": "September 2017-Present",
+        "bullets": [
+          "Increased customer satisfaction by successfully advocating for and implementing streamlined search workflow for case management application.",
+          "Created database migrations to meet changing customer requirements while maximizing preserved customer data",
+          "Designed and implemented gallery that allowed for bulk triage of images in order to increase analyst efficiency.",
+          "Made microservices interchangeable by abstracting client Ajax interface.",
+          "Made client side route security policies configurable by abstracting user permission interfaces."
+        ]
+      },
+      {
+        "title": "Software Engineering Intern",
+        "location": "Cvent Inc, Tysons Corner VA",
+        "date": "Summer 2016",
+        "bullets": [
+          "Increased application reliability by designing and implementing automated end to end test suite",
+          "Evaluated suitability of end to end testing framework (Nightwatch.js)",
+          "Extended Nightwatch.js in order to create commands customized to user interface"
+        ]
+      },
+      {
+        "title": "Software Engineering Intern",
+        "location": "Alarm.com, Vienna VA",
+        "date": "Summer 2015",
+        "bullets": [
+          "Increased quality assurance efficiency by creating webapp for making interactive calls to backend services",
+          "Self taught web technologies (jQuery, Bootstrap, HTML/CSS)"
+        ]
+      },
+      {
+        "title": "Teaching Assistant",
+        "subtitles": ["Object Oriented Programming II"],
+        "location": "University of Maryland, Department of Computer Science",
+        "date": "Spring 2015",
+        "bullets": [
+          "Assisted students in debugging their coursework during office hours",
+          "Evaluated and graded student programming projects, programming style, and exams"
+        ]
+      }
+    ]
+  },
+  "personal": {
+    "items": [
+      {
+        "title": "Blox.io",
+        "location": "Hoya Hacks 2015",
+        "date": "Fall 2015",
+        "bullets": [
+          "Collaborated with diverse team to develop real time interactive 2d game, supported multiple concurrent players, built from scratch",
+          "Chiefly responsible for design and deployment"
+        ]
+      },
+      {
+        "title": "",
+        "location": "RQ Dependency Graph",
+        "date": "Summer 2017",
+        "bullets": [
+          "Extended RQ async library to solve acyclic dependency graphs of asynchronous functions for initializing Node.js servers with many async operations",
+          "Independent student research project with the UMD CS department."
+        ]
+      }
+    ]
+  },
+  "skills": [
+    [
+      "General",
+      "Strong written and verbal communication",
+      "Consistently Seeking and Learning New Technology",
+      "Detail Oriented"
+    ],
+    [
+      "Concepts",
+      "Full stack web development",
+      "Object oriented programming",
+      "Domain driven design",
+      "REST",
+      "End to end testing"
+    ],
+    [
+      "Technologies",
+      "Angular 2+",
+      "React Native",
+      "Mobx",
+      "Redux",
+      "Clarity UI",
+      "Spring Boot",
+      "Node.js",
+      "Selenium Web Driver",
+      "MySQL"
+    ],
+    ["Languages", "Javascript/Typescript", "Java", "C++, C", "Ruby", "Ocaml"]
+  ]
 }
